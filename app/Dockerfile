@@ -3,24 +3,23 @@ RUN apt-get -y update && \
     add-apt-repository -y ppa:ondrej/php && \
     apt-get -y update && \
     apt-get install -y \
-        php8.1 \
-        libapache2-mod-php8.1 \
-        php8.1-common \
-        php8.1-mbstring \
-        php8.1-xmlrpc \
-        php8.1-soap \
-        php8.1-gd \
-        php8.1-xml \
-        php8.1-intl \
-        php8.1-mysql \
-        php8.1-cli \
-        php8.1-ldap \
-        php8.1-zip \
-        php8.1-curl && \
+        php5.2 \
+        libapache2-mod-php5.2 \
+        php5.2-common \
+        php5.2-mbstring \
+        php5.2-xmlrpc \
+        php5.2-soap \
+        php5.2-gd \
+        php5.2-xml \
+        php5.2-intl \
+        php5.2-mysql \
+        php5.2-cli \
+        php5.2-ldap \
+        php5.2-zip \
+        php5.2-curl && \
     wget -O phpunit https://phar.phpunit.de/phpunit-8.phar && \
     chmod +x phpunit && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
 
 COPY sentrifugo.conf /etc/apache2/sites-available/sentrifugo.conf
 COPY --chown=www-data:www-data sentrifugo /var/www/html/
