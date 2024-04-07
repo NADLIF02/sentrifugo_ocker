@@ -4,20 +4,20 @@ RUN apt-get -y update && \
 	apt-get -y install software-properties-common wget && \
 	add-apt-repository -y ppa:ondrej/php && \
 	apt-get install -y \
-		php7.2 \
-		ibapache2-mod-php7.2 \
-		php7.2-common \
-		php7.2-mbstring \
-		php7.2-xmlrpc \
-		php7.2-soap \
-		php7.2-gd \
-		php7.2-xml \
-		php7.2-intl \
-		php7.2-mysql \
-		php7.2-cli \
-		php7.2-ldap \
-		php7.2-zip \
-		php7.2-curl && \
+		php8.1 \
+		ibapache2-mod-php8.1 \
+		php8.1-common \
+		php8.1-mbstring \
+		php8.1-xmlrpc \
+		php8.1-soap \
+		php8.1-gd \
+		php8.1-xml \
+		php8.1-intl \
+		php8.1-mysql \
+		php8.1-cli \
+		php8.1-ldap \
+		php8.1-zip \
+		php8.1-curl && \
 	wget -O phpunit https://phar.phpunit.de/phpunit-8.phar && \
 	chmod +x phpunit
 
