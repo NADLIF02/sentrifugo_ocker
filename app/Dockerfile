@@ -19,12 +19,14 @@ RUN apt-get -y update && \
         php5.2-curl && \
     wget -O phpunit https://phar.phpunit.de/phpunit-8.phar && \
     chmod +x phpunit && \
-    apt-get clean && \
+    apt-get clean
 
+# Copy configurations and application files
 COPY sentrifugo.conf /etc/apache2/sites-available/sentrifugo.conf
 COPY --chown=www-data:www-data sentrifugo /var/www/html/
 
+# Configure Apache and restart
 RUN a2ensite sentrifugo && \
-	a2enmod rewrite && \
-	service apache2 restart && \
-	rm /var/www/html/index.html
+    a2enmod rewrite && \
+    service apache2 restart && \
+    rm /var/www/html/index.html
