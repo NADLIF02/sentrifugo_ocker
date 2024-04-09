@@ -1,3 +1,5 @@
+FROM ubuntu:20.04
+
 RUN apt-get -y update && \
     apt-get -y install software-properties-common wget && \
     add-apt-repository -y ppa:ondrej/php && \
