@@ -36,6 +36,10 @@ RUN apt-get clean && \
 COPY sentrifugo.conf /etc/apache2/sites-available/sentrifugo.conf
 COPY --chown=www-data:www-data sentrifugo /var/www/html/
 
+
+# Start Apache
+CMD ["apache2ctl", "-D", "FOREGROUND"]
+
 # Configure Apache and restart
 RUN a2ensite sentrifugo && \
     a2enmod rewrite && \
