@@ -1,5 +1,5 @@
 # Utilisez l'image officielle MariaDB comme image de base
-FROM mariadb
+FROM mysql:latest
 
 # Mettez à jour les paquets et installez le client MariaDB
 RUN apt-get update && \
