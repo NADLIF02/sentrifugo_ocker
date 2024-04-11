@@ -1,4 +1,0 @@
-CREATE DATABASE sentrifugodb;
-CREATE USER 'sentrifugo'@'%' IDENTIFIED BY 'howtoforge';
-GRANT ALL ON sentrifugodb.* TO 'sentrifugo'@'%' IDENTIFIED BY 'howtoforge' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
