@@ -6500,7 +6500,7 @@ CREATE TABLE `main_userloginlog` (
 
 LOCK TABLES `main_userloginlog` WRITE;
 /*!40000 ALTER TABLE `main_userloginlog` DISABLE KEYS */;
-INSERT INTO `main_userloginlog` VALUES (1,1,1,0,'EMPP0001','soliynyk01@gmail.com','Super Admin','2021-08-19 17:21:27','172.19.0.1',''),(2,1,1,0,'EMPP0001','soliynyk01@gmail.com','Super Admin','2021-08-19 18:43:50','172.19.0.1','');
+INSERT INTO `main_userloginlog` VALUES (1,1,1,0,'EMP0001','soliynyk01@gmail.com','Super Admin','2021-08-19 17:21:27','172.19.0.1',''),(2,1,1,0,'EMP0001','soliynyk01@gmail.com','Super Admin','2021-08-19 18:43:50','172.19.0.1','');
 /*!40000 ALTER TABLE `main_userloginlog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6557,7 +6557,7 @@ CREATE TABLE `main_users` (
 
 LOCK TABLES `main_users` WRITE;
 /*!40000 ALTER TABLE `main_users` DISABLE KEYS */;
-INSERT INTO `main_users` VALUES (1,1,'old','Super','Admin','Super Admin','soliynyk01@gmail.com',NULL,NULL,'Not Applicable',0,NULL,NULL,'7c6a180b36896a0a8c02787eeafb0e4c',NULL,NULL,'2013-11-21 00:00:00','2013-11-21 00:00:00',1,'EMPP0001',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,'default');
+INSERT INTO `main_users` VALUES (1,1,'old','Super','Admin','Super Admin','soliynyk01@gmail.com',NULL,NULL,'Not Applicable',0,NULL,NULL,'7c6a180b36896a0a8c02787eeafb0e4c',NULL,NULL,'2013-11-21 00:00:00','2013-11-21 00:00:00',1,'EMP0001',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,'default');
 /*!40000 ALTER TABLE `main_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
