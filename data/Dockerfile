@@ -1,4 +1,4 @@
-From mariadb
+FROM mariadb
 
 ENV MYSQL_RANDOM_ROOT_PASSWORD=true
 ENV MYSQL_DATABASE=sentrifugo
