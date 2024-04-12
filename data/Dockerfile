@@ -1,5 +1,6 @@
 FROM mariadb
 
+COPY 50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 ENV MYSQL_RANDOM_ROOT_PASSWORD=true
 ENV MYSQL_DATABASE=sentrifugo
 ENV MYSQL_USER=sentrifugo
