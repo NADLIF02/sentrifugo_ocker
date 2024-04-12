@@ -11,9 +11,7 @@ services:
     restart: always
 
   Mariadb:
-    build: 
-      context: .  
-      dockerfile: Dockerfile-mariadb
+    build: ./data
     container_name: Mariadb
     restart: always
     volumes: 
