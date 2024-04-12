@@ -9,7 +9,7 @@ services:
       - mariadb
     restart: always
 
-mariadb:
+   mariadb:
     build: ./data
     container_name: mariadb
     restart: always
