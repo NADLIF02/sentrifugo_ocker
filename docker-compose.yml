@@ -1,8 +1,8 @@
-version: '3.8'  # Adjusted the version for more recent features while still supporting old ones
-
 services:
   sentrifugo:
-    build: ./app
+    build: 
+      context: ./app
+      dockerfile: Dockerfile  # Ensure this is the name of the Dockerfile in the ./app directory
     container_name: sentrifugo
     ports:
       - "80:80"
@@ -10,8 +10,10 @@ services:
       - mariadb
     restart: always
 
-  mariadb:  # Corrected indentation here
-    build: ./data
+  mariadb:
+    build: 
+      context: ./data
+      dockerfile: Dockerfile  # Ensure this is the name of the Dockerfile in the ./data directory
     container_name: mariadb
     restart: always
     volumes: 
@@ -23,6 +25,3 @@ services:
       MYSQL_PASSWORD: sentrifugo_pass
     ports:
       - "3306:3306"
-
-volumes:
-  mariadb_data:
