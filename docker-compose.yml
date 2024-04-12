@@ -11,12 +11,17 @@ services:
     restart: always
 
   db:
-    build: ./db
-    container_name: database
+    build: 
+      context: .  
+      dockerfile: Dockerfile-mariadb
+    container_name: Mariadb
     restart: always
     volumes: 
-      - ./db/data:/var/lib/mariadb
+      - mariadb_data:/var/lib/mysql
     environment:
-      MARIADB_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: sentrifugo_db
+      MYSQL_USER: sentrifugo_user
+      MYSQL_PASSWORD: sentrifugo_pass
     ports:
       - "3306:3306"
