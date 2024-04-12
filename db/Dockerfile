@@ -8,4 +8,4 @@ RUN apt-get update && \
 
 
 # Copiez votre fichier de configuration personnalisé dans le conteneur
- #COPY 50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
+ COPY 50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
