@@ -1,9 +1,9 @@
 version: '3.8'  # Adjusted the version for more recent features while still supporting old ones
 
 services:
-  app:
+  sentrifugo:
     build: ./app
-    container_name: application
+    container_name: sentrifugo
     ports:
       - "80:80"
     depends_on:
