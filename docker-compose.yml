@@ -7,10 +7,10 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - db
+      - Mariadb
     restart: always
 
-  db:
+  Mariadb:
     build: 
       context: .  
       dockerfile: Dockerfile-mariadb
