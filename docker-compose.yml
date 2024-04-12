@@ -1,8 +1,6 @@
 services:
   app:
-    build: 
-      context: ./app
-      dockerfile: Dockerfile_sentrifugo # Ensure this is the name of the Dockerfile in the ./app directory
+    build: ./app
     container_name: sentrifugo
     ports:
       - "80:80"
@@ -11,9 +9,7 @@ services:
     restart: always
 
   data:
-    build: 
-      context: ./data
-      dockerfile: Dockerfile_mariadb  # Ensure this is the name of the Dockerfile in the ./data directory
+    build: ./data
     container_name: mariadb
     restart: always
     volumes: 
