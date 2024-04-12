@@ -1,5 +1,4 @@
 version: '3.8'  # Adjusted the version for more recent features while still supporting old ones
-
 services:
   sentrifugo:
     build: ./app
@@ -10,7 +9,7 @@ services:
       - mariadb
     restart: always
 
-  mariadb:
+mariadb:
     build: ./data
     container_name: mariadb
     restart: always
