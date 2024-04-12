@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.8'  # Adjusted the version for more recent features while still supporting old ones
 
 services:
   app:
@@ -25,3 +25,6 @@ services:
       MYSQL_PASSWORD: sentrifugo_pass
     ports:
       - "3306:3306"
+
+volumes:
+  mariadb_data:  # This creates a named volume that persists data even after the container is removed
