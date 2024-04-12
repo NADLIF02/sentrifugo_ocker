@@ -7,12 +7,12 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - Mariadb
+      - mariadb
     restart: always
 
-  Mariadb:
+  mariadb:
     build: ./data
-    container_name: Mariadb
+    container_name: mariadb
     restart: always
     volumes: 
       - mariadb_data:/var/lib/mysql
