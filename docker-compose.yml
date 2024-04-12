@@ -13,7 +13,7 @@ services:
     container_name: mariadb
     restart: always
     volumes: 
-      - db_data:/var/lib/mysql
+      - ./data/data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: sentrifugo_db
